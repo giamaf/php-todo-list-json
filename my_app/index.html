@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP ToDo List JSON</title>
+
+    <!-- **** Fontawesome **** -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.css'
+        integrity='sha512-tx5+1LWHez1QiaXlAyDwzdBTfDjX07GMapQoFTS74wkcPMsI3So0KYmFe6EHZjI8+eSG0ljBlAQc3PQ5BTaZtQ=='
+        crossorigin='anonymous' />
+
+    <!-- **** Bootstrap 5 **** -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- VueJS -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <!-- Javascript -->
+    <script defer src="js/script.js"></script>
+
+</head>
+
+<body>
+    <section>
+        <div id="app">
+            <div class="container py-5">
+                <div class="card">
+                    <div class="card-body p-5">
+                        <h4 class="mb-3 text-center">To Do List</h4>
+
+                        <!-- Ricerca -->
+                        <!-- <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                        <button class="input-group-text" id="basic-addon1"><i class="fas fa-search"></i></button>
+                    </div> -->
+
+                        <h3 class="text-center mt-2 d-none">Non ci sono task</h3>
+
+                        <!-- Lista -->
+                        <ul class="list-group mt-3">
+                            <li class="d-flex justify-content-between align-items-center list-group-item">HTML
+                                <button class="btn btn-dark" role="button"><i
+                                        class="fa-regular fa-trash-can"></i></button>
+                            </li>
+                            <li class="d-flex justify-content-between align-items-center list-group-item">CSS
+                                <button class="btn btn-dark" role="button"><i
+                                        class="fa-regular fa-trash-can"></i></button>
+                            </li>
+                            <li class="d-flex justify-content-between align-items-center list-group-item">Responsive
+                                design
+                                <button class="btn btn-dark" role="button"><i
+                                        class="fa-regular fa-trash-can"></i></button>
+                            </li>
+                            <li class="d-flex justify-content-between align-items-center list-group-item">Javascript
+                                <button class="btn btn-dark" role="button"><i
+                                        class="fa-regular fa-trash-can"></i></button>
+                            </li>
+
+                            <!-- Aggiungi task -->
+                            <div class="d-flex justify-content-between mt-4 gap-2">
+                                <input type="text" class="form-control" placeholder="Aggiungi task">
+
+                                <button class="btn btn-dark" role="button"><i class="fas fa-plus"></i></button>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
