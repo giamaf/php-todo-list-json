@@ -6,8 +6,23 @@ const app = createApp({
     name: 'PHP ToDO List JSON',
 
     data: () => ({
-        tasks: []
+        tasks: [],
+        newTask: '',
     }),
+
+    methods: {
+        addTask() {
+            const data = {
+                id: this.tasks.length + 1,
+                text: this.newTask,
+                done: false
+            }
+
+            const config = { headers: { 'Content-type': 'multipart/form-data' } }
+
+            axios.post(endpoint, data, config)
+        }
+    },
 
     created() {
         axios.get(endpoint).then(res => {

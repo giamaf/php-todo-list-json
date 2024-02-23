@@ -45,20 +45,27 @@
                         <h3 class="text-center mt-2 d-none">Non ci sono task</h3>
 
                         <!-- Lista -->
-                        <ul class="list-group mt-3">
-                            <li v-for="(task, i) in tasks" :key="i"
-                                class="d-flex justify-content-between align-items-center list-group-item">{{task.text}}
-                                <button class="btn btn-dark" role="button"><i
-                                        class="fa-regular fa-trash-can"></i></button>
-                            </li>
+                        <form @submit.prevent="addTask">
 
-                            <!-- Aggiungi task -->
-                            <div class="d-flex justify-content-between mt-4 gap-2">
-                                <input type="text" class="form-control" placeholder="Aggiungi task">
+                            <ul class="list-group mt-3">
+                                <li v-for="(task, i) in tasks" :key="i"
+                                    class="d-flex justify-content-between align-items-center list-group-item">
+                                    {{task.text}}
+                                    <button class="btn btn-dark" role="button"><i
+                                            class="fa-regular fa-trash-can"></i></button>
+                                </li>
 
-                                <button class="btn btn-dark" role="button"><i class="fas fa-plus"></i></button>
-                            </div>
-                        </ul>
+                                <!-- Aggiungi task -->
+                                <div class="d-flex justify-content-between mt-4 gap-2">
+                                    <input type="text" class="form-control" placeholder="Aggiungi task" name="task"
+                                        v-model.trim="newTask">
+
+                                    <button class="btn btn-dark" type="submit"><i class="fas fa-plus"></i></button>
+                                </div>
+                            </ul>
+
+                        </form>
+
                     </div>
                 </div>
             </div>
